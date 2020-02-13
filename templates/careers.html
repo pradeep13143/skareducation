@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block banner %} {% endblock %}
+{% block body %}
+<section id="main-container" class="main-container">
+	<div class="container">
+		{% for data in careers %}
+			<div class="post">
+				<div class="post-body">
+					<h2 class="entry-title">{{data.name}}</h2>
+					<div class="entry-content">
+						{{data.description|safe}}
+					</div>
+					<div class="post-footer">
+						<a href="/register-tutor/" class="btn btn-primary">Register</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block banner %} {% endblock %}
+{% block body %}
+<section id="main-container" class="main-container">
+	<div class="container">
+		{% if content %}
+			{% for data in content %}
+			<h1 class="section-sub-title">{{data.name}}</h1>
+			<div class="post-body">
+				<div class="entry-content">
+					{{data.description|safe}}
+				</div>
+			</div>
+			{% endfor %}
+		{% else %}
+			<h1 class="section-sub-title text-center">Coming Soon</h1>
+		{% endif %}
+		
+	</div>
+</section>
+<section class="call-to-action-box no-padding">
+   <div class="container">
+      <div class="action-style-box">
+         <div class="row">
+            <div class="col-md-10">
+               <div class="call-to-action-text">
+                  <h3 class="action-title">We are currently in the process of appointing home tutors all over Bangalore Call Now : 9449146119 OR register on our website</h3>
+               </div>
+            </div><!-- Col end -->
+            <div class="col-md-2">
+               <div class="call-to-action-btn">
+                  <a href="/register-tutor/" class="btn btn-dark">Register</a>
+               </div>
+            </div><!-- col end -->
+         </div><!-- row end -->
+      </div><!-- Action style box -->
+   </div><!-- Container end -->
+</section><!-- Action end -->
+{% endblock %}

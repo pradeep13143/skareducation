@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block banner %} {% endblock %}
+{% block body %}
+<section id="main-container" class="main-container">
+	<div class="container">
+		{% for data in aboutus %}
+		<h1 class="section-sub-title">{{data.name}}</h1>
+		<div class="post-body">
+			<div class="entry-content">
+				{{data.description|safe}}
+			</div>
+		</div>
+		{% endfor %}
+		<section class="call-to-action-box no-padding">
+		   <div class="container">
+		      <div class="action-style-box">
+		         <div class="row">
+		            <div class="col-md-10">
+		               <div class="call-to-action-text">
+		                  <h3 class="action-title">Need A Home Tutor ?
+		      Call Now : 9449146119 OR register on our website</h3>
+		               </div>
+		            </div><!-- Col end -->
+		            <div class="col-md-2">
+		               <div class="call-to-action-btn">
+		                  <button id="myBtn1" class="btn btn-dark">Register</button>
+		               </div>
+		            </div><!-- col end -->
+		         </div><!-- row end -->
+		      </div><!-- Action style box -->
+		   </div><!-- Container end -->
+		</section><!-- Action end -->
+	</div>
+</section>
+{% endblock %}
