@@ -97,6 +97,4 @@ def register_tutor(request):
 		teacher.save()
 		added = True
 		success_message = "Thanks for Registering with us, we will contact you shortly."
-		print request.POST
-		print request.FILES
 	return render(request, 'register-tutor.html', locals())
