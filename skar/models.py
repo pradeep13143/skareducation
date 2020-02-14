@@ -58,20 +58,20 @@ class Testimonials(Base):
 		return self.name
 
 class State(Base):
-	name = models.CharField("State Name", max_length=200, on_delete=models.CASCADE)
+	name = models.CharField("State Name", max_length=200)
 
 	def __str__(self):
 		return self.name
 
 class District(Base):
-	state = models.ForeignKey(State)
+	state = models.ForeignKey(State, on_delete=models.CASCADE)
 	name = models.CharField("District Name", max_length=200)
 
 	def __str__(self):
 		return self.name
 
 class City(Base):
-	district = models.ForeignKey(District)
+	district = models.ForeignKey(District, on_delete=models.CASCADE)
 	name = models.CharField("City Name", max_length=200)
 
 	def __str__(self):
@@ -104,8 +104,8 @@ class Student(Base):
 	gender = models.CharField("Gender", choices = GENDER_CHOICES, max_length=200)
 	address = models.TextField()
 	pincode = models.CharField(max_length=200, blank=True, null=True)
-	board = models.ForeignKey(Board, blank=True, null=True)
-	grade = models.ForeignKey(Grade, blank=True, null=True)
+	board = models.ForeignKey(Board, blank=True, null=True, on_delete=models.CASCADE)
+	grade = models.ForeignKey(Grade, blank=True, null=True, on_delete=models.CASCADE)
 	subjects = models.ManyToManyField(Subject, blank=True)
 	details = models.TextField(blank=True, null=True)
 
@@ -118,7 +118,7 @@ class Teacher(Base):
 	phone = models.CharField("Phone numbers", max_length=500)
 	gender = models.CharField("Gender", choices = GENDER_CHOICES, max_length=200)
 	address = models.TextField()
-	city = models.ForeignKey(City, blank=True, null=True)
+	city = models.ForeignKey(City, blank=True, null=True, on_delete=models.CASCADE)
 	photo = ThumbnailerImageField()
 	id_proof_type = models.CharField("Type of ID proof", choices = ID_CHOICES, max_length=200)
 	id_proof = models.FileField(upload_to="proofs")
@@ -137,7 +137,7 @@ class TeacherCategory(Base):
 		return self.name
 
 class TeacherContent(Base):
-	category = models.ForeignKey(TeacherCategory)
+	category = models.ForeignKey(TeacherCategory, on_delete=models.CASCADE)
 	name = models.CharField("Name", max_length=200)
 	description = RichTextField("Description")
 
@@ -153,7 +153,7 @@ class StudentCategory(Base):
 		return self.name
 
 class StudentContent(Base):
-	category = models.ForeignKey(StudentCategory)
+	category = models.ForeignKey(StudentCategory, on_delete=models.CASCADE)
 	name = models.CharField("Name", max_length=200)
 	description = RichTextField("Description")
 
@@ -176,8 +176,8 @@ class AboutUs(Base):
 		return self.name
 
 class Admission(Base):
-	student = models.ForeignKey(Student)
-	teacher = models.ForeignKey(Teacher)
+	student = models.ForeignKey(Student, on_delete=models.CASCADE)
+	teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
 	start_date = models.DateTimeField(blank=True, null=True)
 	end_date = models.DateTimeField(blank=True, null=True)
 	admission_fee = models.IntegerField(blank=True, null=True)
