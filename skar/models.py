@@ -58,7 +58,7 @@ class Testimonials(Base):
 		return self.name
 
 class State(Base):
-	name = models.CharField("State Name", max_length=200)
+	name = models.CharField("State Name", max_length=200, on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.name
