@@ -384,6 +384,10 @@
 
 	/* Top bar */
 
+	.header-right{
+		display: none;
+	}
+	
 	ul.top-info{
 		text-align: center;
 	}
