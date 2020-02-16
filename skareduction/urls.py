@@ -18,7 +18,7 @@ from django.contrib import admin
 from skar.views import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^developeradmin/', admin.site.urls),
     url(r'^$', home, name='home'),
     url(r'^about-us/$', about_us, name='about-us'),
     url(r'^blog/$', blog, name='blog'),
@@ -30,4 +30,6 @@ urlpatterns = [
     url(r'^student/(?P<slug>[\w-]+)/$', student_content, name='student_content'),
     url(r'^register-student/$', register_student, name='register_student'),
     url(r'^register-tutor/$', register_tutor, name='register_tutor'),
+    url(r'^manage-admin/$', manage_admin, name='manage-admin'),
+    url(r'^manage-home/$', manage_home, name='manage-home'),
 ]

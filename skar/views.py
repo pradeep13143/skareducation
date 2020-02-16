@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponseRedirect
 
 from .models import *
 
@@ -98,3 +100,19 @@ def register_tutor(request):
 		added = True
 		success_message = "Thanks for Registering with us, we will contact you shortly."
 	return render(request, 'register-tutor.html', locals())
+
+
+def manage_admin(request):
+	error_message = ''
+	user = request.user
+	if request.method == "POST":
+		user = authenticate(username=request.POST['username'], password=request.POST['password'])
+		if user is not None:
+			login(request, user)
+			return HttpResponseRedirect('/manage-home/') 
+		else:
+			error_message = "Invalid user, please check your credentials"
+	return render(request, 'manage.html', locals())
+
+def manage_home(request):
+	return render(request, 'manage-home.html', locals())

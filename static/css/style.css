@@ -3537,6 +3537,9 @@ label {
     font-weight: 700;
 }
 
+.error-message {
+    color: red;
+}
 
 /* Header variation
 ================================================== */

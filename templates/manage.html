@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block topbar %}{% endblock %}
+{% block header %}{% endblock %}
+{% block banner %}{% endblock %}
+{% block body %}
+	<section id="main-container" class="main-container">
+      <div class="container">
+
+         
+
+        <div class="row">
+
+            <div class="col-md-12">
+               
+               <h3 class="column-title">BACKEND LOGIN</h3>
+					{% if error_message %}
+		                  <div class="error-container">
+		                  	<p class="error-message">{{error_message}}</p>
+		                  </div>
+                  	{% endif %}
+               <form action="." method="POST" role="form">{% csrf_token %}
+                  
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label>Username</label>
+                        <input class="form-control form-control-name" name="username" id="username" placeholder="" type="text" required>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label>Password</label>
+                           <input class="form-control form-control-password" name="password" id="password" 
+                           placeholder="" type="password" required>
+                        </div>
+                     </div>
+                  </div>
+                  <div><br>
+                     <button class="btn btn-primary solid blank" type="submit">LOGIN</button> 
+                  </div>
+               </form>
+            </div>
+         
+         </div><!-- Content row -->
+      </div><!-- Conatiner end -->
+   </section><!-- Main container end -->
+{% endblock %}
+{% block footer %}{% endblock %}
