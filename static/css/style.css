@@ -2320,7 +2320,7 @@ h4.panel-title a.collapsed:before {
 .quote-item .quote-text {
     margin: 0 0 10px;
     display: inline-block;
-    padding: 0 40px 30px 60px;
+    padding: 0 40px 0px 60px;
     background-color: #fff;
     position: relative;
     font-size: 16px;

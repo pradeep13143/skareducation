@@ -20,8 +20,8 @@
                <div class="slider-content">
                   <div class="col-md-12 text-center">
                      <h2 class="slide-title animated4">{{banner.title}} </h2>
-                     <h3 class="slide-sub-title animated5">{{banner.tagline}}</h3>
-                     <p class="slider-description lead animated7">{{banner.content|safe}}</p>
+                     <h3 class="slide-sub-title animated5">{{banner.content}}</h3>
+                     <p class="slider-description lead animated7">{{banner.tagline}}</p>
                   </div>
                </div>
             </div>
@@ -132,6 +132,9 @@
 				<p>Current school teachers, ex-school teachers, college lectures and professors, graduates, post graduates and under graduates in any discipline and of course full time tutors with good experience.</p>
 			</div>
 		</div>
+      <div class="gap-20"></div>
+      <div class="gap-20"></div>
+      <div class="gap-20"></div>
       <section class="call-to-action-box no-padding">
          <div class="container">
             <div class="action-style-box">
@@ -165,11 +168,11 @@
                      </span>
 
                      <div class="quote-item-footer">
-                        {% if testimonial.image %}
+    <!--                     {% if testimonial.image %}
                         <img class="testimonial-thumb" src="{{testimonial.image}}" alt="testimonial">
                         {% else %}
                         <img class="testimonial-thumb" src="/static/images/testimonials.png" alt="testimonial">
-                        {% endif %}
+                        {% endif %} -->
                         <div class="quote-item-info">
                            <h3 class="quote-author">{{testimonial.name}}</h3>
                            <span class="quote-subtext">{{testimonial.address}}</span>
@@ -185,10 +188,5 @@
       </div>
    </div><!-- Conatiner end -->
 
-</section>
-<section class="content">
-   <div class="container">
-      
-   </div>
 </section>
 {% endblock %}
