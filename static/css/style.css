@@ -472,7 +472,7 @@ cite {
 }
 
 .btn-dark {
-    background: #23282d;
+    background: #08bdda;;
 }
 
 .btn-primary:hover,
@@ -2550,7 +2550,7 @@ img.testimonial-thumb {
 
 .footer {
     background-color: #08bdda;
-    color: #999;
+    color: #555;
 }
 
 
@@ -3554,7 +3554,7 @@ label {
 /*-- Header One --*/
 
 .header-one .site-navigation{
-    background: #23282d;
+    background: #08bdda;
 }
 
 .header-one .navbar-collapse{
