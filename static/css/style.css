@@ -339,7 +339,11 @@ img.pull-right {
     font-size: 36px;
     line-height: 50px;
     margin: 0 0 10px;
-    color: #212121;
+    color: #08bdda;
+}
+
+.slider-description{
+    text-align: center;
 }
 
 /* Column title */
@@ -1564,6 +1568,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     line-height: 36px;
     font-size: 18px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 
@@ -2215,6 +2220,7 @@ h4.panel-title {
     padding: 8px 0 8px 0;
     line-height: normal;
     border-radius: 0;
+    text-align: left;
 }
 
 h4.panel-title a {
