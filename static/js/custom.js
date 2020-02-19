@@ -85,8 +85,8 @@ jQuery(function ($) {
 	/* ----------------------------------------------------------- */
 
 	$('#main-slide').carousel({
-		pause: true,
-		interval: 100000,
+		pause: 'hover',
+		interval: 10000,
 	});
 
 
