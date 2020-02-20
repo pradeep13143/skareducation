@@ -2549,8 +2549,8 @@ img.testimonial-thumb {
 /*- Footer common */
 
 .footer {
-    background-color: #08bdda;
-    color: #555;
+    background-color: #555;
+    color: #fff;
 }
 
 
@@ -2654,7 +2654,7 @@ img.testimonial-thumb {
 .copyright {
     background: #13d7ae;
     color: #111;
-    padding: 25px 0;
+    padding: 10px 0;
     position: relative;
     z-index: 1;
     font-weight: 600;
@@ -3554,7 +3554,7 @@ label {
 /*-- Header One --*/
 
 .header-one .site-navigation{
-    background: #08bdda;
+    background: #555;
 }
 
 .header-one .navbar-collapse{
