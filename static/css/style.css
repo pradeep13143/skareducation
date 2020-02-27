@@ -339,11 +339,15 @@ img.pull-right {
     font-size: 36px;
     line-height: 50px;
     margin: 0 0 10px;
-    color: #08bdda;
+    color: #545252;
 }
 
 .slider-description{
     text-align: center;
+}
+
+.head-left{
+    text-align: left;
 }
 
 /* Column title */
@@ -536,6 +540,7 @@ ul.list-arrow li:before {
 
 .entry-content h3 {
     text-transform: initial;
+    text-align: left;
 }
 
 ul.list-check li:before {
